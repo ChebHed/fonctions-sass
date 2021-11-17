@@ -1,0 +1,5 @@
+@function maFonction($nombreA, $nombreB){
+
+    @return $nombreA*math.div($nombreB,$nombreA);
+    
+}

@@ -1,0 +1,79 @@
+/* modifié par CHEBHED le 17/11/2021 */
+// 
+@use 'sass:math';
+@use './variables' as *;
+@use "sass:selector";
+@use 'functions';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+
+  body {
+    color: pink;
+    background-color: blue;
+    font-size: maFonction(20,2)rem;}
+
+  $selector: selector-append("a", ".active");
+
+  #{$selector}{
+    font-size: 25px;
+    color: red;
+    font-style: bold;
+  }
+
+  //meme chose en css
+  // a.active{
+  //   font-size: 25px;
+  //   color: red;
+  //   font-style: bold;
+  // }
+
+
+
+
+  
+  //<--Utilisation de la fonction scale-color (une couleur + lightness/ saturation en pourcentage)-->
+
+  // aside{
+  //   margin: 3em;
+  //   padding: 1em;
+  //   background-color: scale-color($primary-color, $lightness: 60%);
+  // }
+  
+
+  // aside::before{
+  //   content: open-quote;
+  // }
+
+
+  // aside::after{
+  //   content: close-quote;
+  // }
+
+
+
+
+
+
+
+  //<--Utilisation de la fonction math-->
+  // $columns : 3;
+
+  // .col-width {
+  // width: math.div(1, $columns);
+  // }
+
+  // .col-width{
+  //   width: percentage(math.div(1,$columns))
+  // }
+
+  //exemple de fonction :
+  // @function sum($arg1, $arg2){
+  //   @return $arg1+arg2;
+  // }
